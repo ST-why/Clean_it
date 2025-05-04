@@ -7,7 +7,7 @@
     android:padding="16dp"
     tools:context=".Check_UI">
 
-    <!-- + 버튼 (상단 중앙, 전체 너비 직사각형) -->
+    <!-- + 버튼 -->
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="0dp"
@@ -22,7 +22,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp" />
 
-    <!-- 텍스트 입력창 (초기 비활성) -->
+    <!-- 텍스트 입력창 -->
     <EditText
         android:id="@+id/editText"
         android:layout_width="0dp"
@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="12dp" />
 
-    <!-- 완료 버튼 (초기 비활성) -->
+    <!-- 완료 버튼 -->
     <Button
         android:id="@+id/btnDone"
         android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp" />
 
-    <!-- 중앙 회색 박스 (RecyclerView 포함) -->
+    <!-- RecyclerView 포함 박스 -->
     <LinearLayout
         android:id="@+id/progressBox"
         android:layout_width="0dp"
@@ -55,7 +55,7 @@
         android:orientation="vertical"
         android:background="#EEEEEE"
         app:layout_constraintTop_toBottomOf="@id/btnDone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnSave"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -64,5 +64,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
+
+    <!-- 저장 버튼 (하단 고정) -->
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:backgroundTint="#03A9F4"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
