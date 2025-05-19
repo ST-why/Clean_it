@@ -1,12 +1,13 @@
 package com.example.cleanit;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.ViewGroup;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.view.ViewGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,6 +33,11 @@ public class Main_UI extends AppCompatActivity {
         addTodoItem("청소 항목2");
         addTodoItem("청소 항목3");
         addTodoItem("청소 항목4");
+
+        findViewById(R.id.btnAddSpace).setOnClickListener(v -> {
+            Intent intent = new Intent(Main_UI.this, SpaceListActivity.class);
+            startActivity(intent);
+        });
 
 
     }
@@ -79,3 +85,4 @@ public class Main_UI extends AppCompatActivity {
         todoListLayout.addView(tv);
     }
 }
+
